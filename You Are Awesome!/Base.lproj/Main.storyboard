@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,26 +19,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I09-YJ-4Cf">
-                                <rect key="frame" x="78" y="20" width="221" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="26"/>
-                                <color key="textColor" red="0.031523868441581726" green="0.97565740346908569" blue="0.89607065916061401" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vd-MW-tJG">
-                                <rect key="frame" x="136" y="217" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vd-MW-tJG">
+                                <rect key="frame" x="135" y="215" width="104" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oRr-6S-3vs"/>
+                                </constraints>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E1R-Ih-MWI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rohan's Magic 8 Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1H-vB-4UJ">
+                                <rect key="frame" x="83" y="39" width="208" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="w3x-Ln-ZIy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-cn-4RY">
+                                <rect key="frame" x="16" y="278" width="343" height="311"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I09-YJ-4Cf">
+                                <rect key="frame" x="16" y="100" width="343" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="wnV-4g-f5p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="26"/>
+                                <color key="textColor" red="0.24138632416725159" green="0.50670260190963745" blue="0.086740933358669281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I09-YJ-4Cf" firstAttribute="centerX" secondItem="5Vd-MW-tJG" secondAttribute="centerX" id="SSA-Rc-pcB"/>
+                            <constraint firstItem="I09-YJ-4Cf" firstAttribute="leading" secondItem="qc1-cn-4RY" secondAttribute="leading" id="Snz-7k-lGX"/>
+                            <constraint firstItem="5Vd-MW-tJG" firstAttribute="top" secondItem="I09-YJ-4Cf" secondAttribute="bottom" constant="50" id="V8u-7Y-XGr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qc1-cn-4RY" secondAttribute="bottom" constant="78" id="a4E-Ba-fQy"/>
+                            <constraint firstItem="I09-YJ-4Cf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a5d-Eu-zI5"/>
+                            <constraint firstItem="A1H-vB-4UJ" firstAttribute="centerX" secondItem="I09-YJ-4Cf" secondAttribute="centerX" id="bBJ-c7-9fQ"/>
+                            <constraint firstItem="A1H-vB-4UJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="c6O-H2-HB3"/>
+                            <constraint firstItem="I09-YJ-4Cf" firstAttribute="trailing" secondItem="qc1-cn-4RY" secondAttribute="trailing" id="cnG-mh-lrk"/>
+                            <constraint firstItem="I09-YJ-4Cf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cvf-4N-8ro"/>
+                            <constraint firstItem="A1H-vB-4UJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="hWz-82-ubM"/>
+                            <constraint firstItem="qc1-cn-4RY" firstAttribute="top" secondItem="5Vd-MW-tJG" secondAttribute="bottom" constant="33" id="qrS-Rf-13q"/>
+                            <constraint firstItem="I09-YJ-4Cf" firstAttribute="top" secondItem="A1H-vB-4UJ" secondAttribute="bottom" constant="40" id="tDq-ZU-WmM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="awesomeImage" destination="qc1-cn-4RY" id="QcX-jF-jkH"/>
                         <outlet property="messageLabel" destination="I09-YJ-4Cf" id="ccn-up-8hx"/>
                     </connections>
                 </viewController>
@@ -46,4 +78,7 @@
             <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image0" width="1280" height="1127"/>
+    </resources>
 </document>
